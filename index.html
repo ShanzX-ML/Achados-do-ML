@@ -4,78 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Achados no ML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f4f4; color: #333;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
     }
+
     header {
-      background: #ffce00;
-      padding: 1rem;
+      background-color: #ffce00;
+      padding: 1.5rem 0;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
     header h1 {
       margin: 0;
+      font-size: 1.8rem;
       color: #000;
     }
+
     .promo-section {
-      padding: 2rem;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
       text-align: center;
     }
+
     .promo-section h2 {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+      color: #111;
     }
+
     .promo-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
+
     .promo-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      width: 260px;
-      padding: 1rem;
       background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
     }
+
+    .promo-card:hover {
+      transform: translateY(-5px);
+    }
+
     .promo-card img {
       width: 100%;
-      height: auto;
-      border-radius: 4px;
+      height: 220px;
+      object-fit: cover;
     }
+
     .promo-card h3 {
       font-size: 1.1rem;
-      margin: 0.75rem 0;
+      margin: 1rem 0 0.5rem;
+      padding: 0 1rem;
+      color: #222;
     }
-    .price {
-      font-size: 1.25rem;
-      color: #333;
+
+    .price, .pix-price {
       margin: 0.5rem 0;
+      font-weight: bold;
     }
+
+    .price {
+      color: #333;
+    }
+
     .pix-price {
-      font-size: 1.1rem;
       color: #008000;
-      margin: 0.5rem 0 1rem;
     }
+
     .btn-buy {
       display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #ffce00;
+      margin: 1rem 0 1.5rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #ffce00;
       color: #000;
-      text-decoration: none;
       font-weight: bold;
-      border-radius: 4px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.2s ease;
     }
+
     .btn-buy:hover {
-      background: #e6b800;
+      background-color: #e6b800;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
+      font-size: 0.9rem;
       background: #eee;
       margin-top: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      .promo-card img {
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -84,34 +120,34 @@
   <header>
     <h1>Achados no ML</h1>
   </header>
-<section class="promo-section">
-  <h2>Promoções do momento</h2>
-  <div class="promo-grid">
 
-    <!-- Samsung Galaxy A06 -->
-    <div class="promo-card">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_2X_876389-MLB71102660310_062023-F.webp" alt="Samsung Galaxy A06 128GB Branco">
-      <h3>Samsung Galaxy A06 128 GB – Branco</h3>
-      <p class="price">R$ 799,00</p>
-      <p class="pix-price">À vista no PIX: <strong>R$ 759,05</strong></p>
-      <a href="https://www.mercadolivre.com.br/smartphone-samsung-galaxy-a06-4g-128gb/p/MLB40304330" target="_blank" class="btn-buy">Comprar</a>
+  <section class="promo-section">
+    <h2>Promoções do momento</h2>
+    <div class="promo-grid">
+
+      <!-- Produto 1 -->
+      <div class="promo-card">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_876389-MLB71102660310_062023-F.webp" alt="Samsung Galaxy A06 128GB Branco">
+        <h3>Samsung Galaxy A06 128 GB – Branco</h3>
+        <p class="price">R$ 799,00</p>
+        <p class="pix-price">À vista no PIX: <strong>R$ 759,05</strong></p>
+        <a href="https://www.mercadolivre.com.br/smartphone-samsung-galaxy-a06-4g-128gb/p/MLB40304330" target="_blank" class="btn-buy">Comprar</a>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="promo-card">
+        <img src="https://images.mgcdn.co/melhoresc/offer_images/0/18358/1600x900.jpg" alt="Motorola Moto G15 128GB Azul Claro">
+        <h3>Motorola Moto G15 128 GB – Azul Claro</h3>
+        <p class="price">R$ 980,00</p>
+        <p class="pix-price">À vista no PIX: <strong>R$ 944,10</strong></p>
+        <a href="https://www.mercadolivre.com.br/smartphone-motorola-moto-g15-128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp/p/MLB46056585" target="_blank" class="btn-buy">Comprar</a>
+      </div>
+
     </div>
-
-    <!-- Motorola Moto G15 -->
-    <div class="promo-card">
-      <img src="https://images.mgcdn.co/melhoresc/offer_images/0/18358/1600x900.jpg" alt="Motorola Moto G15 128GB Azul Claro">
-      <h3>Motorola Moto G15 128 GB – Azul Claro</h3>
-      <p class="price">R$ 980,00</p>
-      <p class="pix-price">À vista no PIX: <strong>R$ 980,00</strong></p>
-      <a href="https://www.mercadolivre.com.br/smartphone-motorola-moto-g15-128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp/p/MLB46056585" target="_blank" class="btn-buy">Comprar</a>
-    </div>
-
-  </div>
-</section>
-  
+  </section>
 
   <footer>
-    <p>&copy; 2025 Achados no ML. Todos os direitos reservados.</p>
+    &copy; 2025 Achados no ML — Ofertas atualizadas periodicamente.
   </footer>
 
 </body>
