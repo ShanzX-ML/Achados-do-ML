@@ -47,6 +47,7 @@
     }
 
     .promo-card {
+      position: relative;
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
@@ -69,6 +70,15 @@
       margin: 1rem 0 0.5rem;
       padding: 0 1rem;
       color: #222;
+      height: 3rem;
+      overflow: hidden;
+    }
+
+    .old-price {
+      font-size: 0.95rem;
+      color: #777;
+      text-decoration: line-through;
+      display: block;
     }
 
     .price, .pix-price {
@@ -77,7 +87,8 @@
     }
 
     .price {
-      color: #333;
+      color: #000;
+      font-size: 1.2rem;
     }
 
     .pix-price {
@@ -100,6 +111,18 @@
       background-color: #e6b800;
     }
 
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #ff3d3d;
+      color: white;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -107,19 +130,20 @@
       background: #eee;
       margin-top: 2rem;
     }
-    .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-}
 
-.whatsapp-float img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
 
     @media (max-width: 480px) {
       .promo-card img {
@@ -140,28 +164,34 @@
 
       <!-- Produto 1: Samsung Galaxy A06 -->
       <div class="promo-card">
+        <span class="badge">-10%</span>
         <img src="https://i.postimg.cc/02Q7ZqWK/images-1.jpg" alt="Samsung Galaxy A06 128GB Branco" />
         <h3>Samsung Galaxy A06 128 GB – Branco</h3>
-        <p class="price">R$ 776,00 em 18X no mercado pago</p>
-        <p class="pix-price">À vista no PIX: <strong>R$ 699,00</strong></p>
+        <span class="old-price">R$ 776,00</span>
+        <p class="price">R$ 699,00 em 18X no mercado pago</p>
+        <p class="pix-price">À vista no PIX: <strong>R$ 659,00</strong></p>
         <a href="https://mercadolivre.com/sec/1BN8TuS" target="_blank" class="btn-buy">Comprar</a>
       </div>
 
       <!-- Produto 2: Motorola Moto G15 -->
       <div class="promo-card">
+        <span class="badge">-15%</span>
         <img src="https://i.postimg.cc/ZRgnb1m0/images-2.jpg" alt="Motorola Moto G15 128GB Azul Claro" />
         <h3>Motorola Moto G15 128 GB – Azul Claro</h3>
-        <p class="price">R$ 849,00 em 18X no mercado pago</p>
-        <p class="pix-price">À vista no PIX: <strong>R$ 721,65</strong></p>
+        <span class="old-price">R$ 849,00</span>
+        <p class="price">R$ 721,65 em 18X no mercado pago</p>
+        <p class="pix-price">À vista no PIX: <strong>R$ 689,00</strong></p>
         <a href="https://mercadolivre.com/sec/1CQzrJ8" target="_blank" class="btn-buy">Comprar</a>
       </div>
 
     </div>
   </section>
-  <a href="https://wa.me/5519999635817?text=Olá!%20Estou%20interessado%20nas%20promoções%20do%20Achados%20no%20ML" 
-   class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
-</a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/5519999635817?text=Olá!%20Estou%20interessado%20nas%20promoções%20do%20Achados%20no%20ML"
+     class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
+  </a>
 
   <footer>
     &copy; 2025 Achados no ML — Ofertas atualizadas periodicamente.
