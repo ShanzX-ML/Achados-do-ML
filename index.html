@@ -144,6 +144,17 @@
       border-radius: 50%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+    .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ml-logo {
+  height: 36px;
+  width: auto;
+}
 
     @media (max-width: 480px) {
       .promo-card img {
@@ -155,7 +166,12 @@
 <body>
 
   <header>
+  <div class="header-container">
+    <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.4.6/mercado-libre.png"
+         alt="Mercado Livre" class="ml-logo" />
     <h1>Achados no ML</h1>
+  </div>
+  </header>
   </header>
 
   <section class="promo-section">
